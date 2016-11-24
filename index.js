@@ -182,6 +182,9 @@ class CameraRollPicker extends Component {
     if (index >= 0) {
       selected.splice(index, 1);
     } else {
+      if(maximum == 1) {
+        selected.pop();
+      }
       if (selected.length < maximum) {
         selected.push(image);
       }
